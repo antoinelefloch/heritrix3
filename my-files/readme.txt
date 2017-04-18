@@ -45,18 +45,22 @@ java.lang.ClassNotFoundException: sun.security.tools.KeyTool ------- if you use 
 https://172.17.0.2:8443/engine    (container address)
 use the interface to start jobs
 
+see crawler-beans.cxml  config in "my-files" folder
+
 ------------------------------------ when using warc files
+
+docker cp a4deac8383b5:/root/WEB-20170411150655316-00000-728~f894a5a7aa4d~8443.warc.gz  .
+
 pip install bottle
 pip install warcat
 python3 -m warcat --output-dir out1 extract WEB-20170411150655316-00000-728~f894a5a7aa4d~8443.warc.gz
 
-docker cp a4deac8383b5:/root/WEB-20170411150655316-00000-728~f894a5a7aa4d~8443.warc.gz  .
+----------------------------------- when using mysql
 
 root@a4deac8383b5:~/heritrix-3.3.0-SNAPSHOT# cp ~/.m2/repository/mysql/mysql-connector-java/5.1.12/mysql-connector-java-5.1.12.jar lib/
 
------------------------------------ when using mysql, see crawler-beans.cxml  config in "my-files" folder
 root@ara:~/# vi /var/log/mysql/error.log
-root@ara:~/# vi /etc/mysql/my.cnf                    *********** bind address
+root@ara:~/# vi /etc/mysql/my.cnf
 > [mysqld]
 > bind-address=0.0.0.0
 
