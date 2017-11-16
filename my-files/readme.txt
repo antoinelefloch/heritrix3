@@ -70,7 +70,7 @@ root@ara:~/# vi /etc/mysql/my.cnf
 
 /etc/init.d/mysql start     (on the host)
 
-mysql> GRANT ALL ON akimatch.* TO 'root'@'172.17.0.2' IDENTIFIED BY 'password';
+mysql> GRANT ALL ON whatever_schema.* TO 'root'@'172.17.0.2' IDENTIFIED BY 'password';
 mysql> flush privileges;
 (GRANT should do an implicit COMMIT)
 
